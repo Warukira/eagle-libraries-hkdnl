@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -66,8 +66,8 @@
 <polygon width="0" layer="1">
 <vertex x="-1.4275" y="1.675"/>
 <vertex x="1.675" y="1.675"/>
-<vertex x="1.675" y="-1.675"/>
-<vertex x="-1.675" y="-1.675"/>
+<vertex x="1.675" y="-1.475"/>
+<vertex x="-1.675" y="-1.475"/>
 <vertex x="-1.675" y="1.4275"/>
 </polygon>
 <smd name="P$2" x="-2.4" y="1.5" dx="0.95" dy="0.3" layer="1"/>
@@ -102,6 +102,7 @@
 <rectangle x1="0.15" y1="0.15" x2="1.35" y2="1.35" layer="31"/>
 <rectangle x1="0.15" y1="-1.35" x2="1.35" y2="-0.15" layer="31"/>
 <rectangle x1="-1.35" y1="-1.35" x2="-0.15" y2="-0.15" layer="31"/>
+<smd name="P$1" x="0" y="-1.4" dx="3.35" dy="0.5" layer="1"/>
 </package>
 </packages>
 <symbols>
