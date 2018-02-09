@@ -26,7 +26,7 @@
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
@@ -52,7 +52,7 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -64,6 +64,13 @@
 <package name="ABM3">
 <smd name="P$1" x="-2.05" y="0" dx="2.4" dy="1.9" layer="1" rot="R90"/>
 <smd name="P$2" x="2.05" y="0" dx="2.4" dy="1.9" layer="1" rot="R90"/>
+</package>
+<package name="HEADER-05">
+<pad name="P$1" x="-2.54" y="0" drill="0.6" shape="square"/>
+<pad name="P$2" x="-1.27" y="0" drill="0.6"/>
+<pad name="P$3" x="0" y="0" drill="0.6"/>
+<pad name="P$4" x="1.27" y="0" drill="0.6"/>
+<pad name="P$5" x="2.54" y="0" drill="0.6"/>
 </package>
 </packages>
 <symbols>
@@ -84,6 +91,17 @@
 <pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
 </symbol>
+<symbol name="PIN-HEAD-05">
+<pin name="P0" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<pin name="P1" x="10.16" y="-2.54" length="middle" rot="R180"/>
+<pin name="P2" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="P3" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="P4" x="10.16" y="5.08" length="middle" rot="R180"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ABM3-8.000MHZ-D2Y-T" uservalue="yes">
@@ -99,6 +117,28 @@ Ceramic Package Hermetically Glass Sealed Assures High Precision and Reliability
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CHECKED" value="NC" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PIN-HEAD-05">
+<description>5 pins 1.27mm pinheader</description>
+<gates>
+<gate name="G$1" symbol="PIN-HEAD-05" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HEADER-05">
+<connects>
+<connect gate="G$1" pin="P0" pad="P$1"/>
+<connect gate="G$1" pin="P1" pad="P$2"/>
+<connect gate="G$1" pin="P2" pad="P$3"/>
+<connect gate="G$1" pin="P3" pad="P$4"/>
+<connect gate="G$1" pin="P4" pad="P$5"/>
 </connects>
 <technologies>
 <technology name="">
