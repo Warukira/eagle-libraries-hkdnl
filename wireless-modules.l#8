@@ -173,6 +173,39 @@ http://www.hoperf.com/rf_transceiver/lora/RFM98W.html</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="RFM98W">
+<description>433/470Mhz RF Transceiver Module
+http://www.hoperf.com/rf_transceiver/lora/RFM98W.html
+
+The RF transceiver module RFM98W feature the LoRaTM long range modem that provides ultra-long range spread spectrum communication and 
+high interference immunity whilst minimising current consumption.</description>
+<gates>
+<gate name="G$1" symbol="RFM98W" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RFM9X">
+<connects>
+<connect gate="G$1" pin="ANT" pad="P$16"/>
+<connect gate="G$1" pin="DIO0" pad="P$11"/>
+<connect gate="G$1" pin="DIO1" pad="P$10"/>
+<connect gate="G$1" pin="DIO2" pad="P$9"/>
+<connect gate="G$1" pin="DIO3" pad="P$14"/>
+<connect gate="G$1" pin="DIO4" pad="P$13"/>
+<connect gate="G$1" pin="DIO5" pad="P$7"/>
+<connect gate="G$1" pin="GND" pad="P$1 P$8 P$15"/>
+<connect gate="G$1" pin="RFM_MISO" pad="P$2"/>
+<connect gate="G$1" pin="RFM_MOSI" pad="P$3"/>
+<connect gate="G$1" pin="RFM_NSS" pad="P$5"/>
+<connect gate="G$1" pin="RFM_RESET" pad="P$6"/>
+<connect gate="G$1" pin="RFM_SCK" pad="P$4"/>
+<connect gate="G$1" pin="VDD" pad="P$12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
